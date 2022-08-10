@@ -4,34 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CS
+namespace Array_Operations_DS
 {
     class InsertionSort
     {
-        public static void sort(int[] arr)
+        static void printArray(int[] arr)
         {
-            int n = arr.Length;
-            for (int i = 1; i < n; ++i)
+            foreach (int i in arr)
+            {
+                Console.WriteLine(i + " ");
+            }
+        }
+        static void insertionSort(int[] arr)
+        {
+            int n = arr.Length;            
+            for(int i = 1; i <= n - 1; i++)
             {
                 int key = arr[i];
                 int j = i - 1;
-
-                // Move elements of arr[0..i-1],
-                // that are greater than key,
-                // to one position ahead of
-                // their current position
-                while (j >= 0 && arr[j] > key)
+                while(j>= 0 && arr[j] > key)
                 {
                     arr[j + 1] = arr[j];
-                    j = j - 1;
+                    j--;
                 }
                 arr[j + 1] = key;
             }
-
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
-            }
         }
+
+        //static void Main(String[] args)
+        //{
+        //    int[] array = new int[] { 5, 9, 15, 7, 2 };
+        //    //int[] array = new int[] { 2, 9, 15, 21, 25 };
+
+        //    printArray(array);
+        //    insertionSort(array);
+        //    Console.WriteLine("------------------------");
+        //    printArray(array);
+
+        //    Console.ReadKey();
+        //}
     }
 }

@@ -1,44 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CS
+namespace Array_Operations_DS
 {
     class BubbleSort
     {
-        //Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements until a higher element is not found if they are in wrong order.
-        public static void bubbleSort(int[] arr)
+        static void printArray(int[] arr)
         {
-            int n = arr.Length;
-            bool swapped;
-
-            for (int i = 0; i < n - 1; i++)
+            foreach (int i in arr)
             {
-                swapped = false;
-                for (int j = 0; j < n - i - 1; j++)
-                {
-                    if (arr[j] > arr[j + 1])
-                    {
-                        // swap temp and arr[i]
-                        int temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                        swapped = true;
-                    }
-
-                    if (swapped == false)
-                    { 
-                        break;
-                    }
-
-                }
-            }
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
+                Console.WriteLine(i + " ");
             }
         }
+
+        static  void bubbleSort(int[] arr)
+        {
+            int n = arr.Length;
+            int temp;
+            bool isSorted = true;
+            for (int i = 0; i < n-1; i++)
+            {
+                for(int j = 0;j < n - i - 1; j++) // For no. of Passes
+                {
+                    if(arr[j] > arr[j + 1]) // For no. of comparisons in the passes
+                    {
+                        temp = arr[j + 1];
+                        arr[j + 1] = arr[j];
+                        arr[j] = temp;
+                        isSorted = false;
+                    }
+                }
+                if (isSorted)
+                {
+                    return;
+                }
+            }
+        }
+
+        //static void Main(String[] args)
+        //{
+        //    //int[] array = new int[] { 5, 9, 15, 7, 2 };
+        //    int[] array = new int[] { 2, 9, 15, 21, 25 };
+
+        //    printArray(array);
+        //    bubbleSort(array);
+        //    Console.WriteLine("------------------------");
+        //    printArray(array);
+
+        //    Console.ReadKey();
+        //}
     }
 }
