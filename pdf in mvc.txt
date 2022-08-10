@@ -1,0 +1,24 @@
+<div>
+    <button onclick="GetClientReport()">Open Report</button>
+</div>
+
+Upon clicking the button goto Actionresult file
+
+public ActionResult File()
+        {
+            string report = @"C:\Users\SHIVAM\Desktop\POAForm_S187533_03092021.pdf";
+            byte[] FIleBytes = System.IO.File.ReadAllBytes(report);
+            //ViewBag.file = FIleBytes;
+            //return View("Index", FIleBytes);
+            return File(FIleBytes,"application/pdf");
+        }
+
+
+return the file and type of file
+
+
+<script type="text/javascript">
+    function GetClientReport() {
+        window.open('/Home/File', "_top);  
+};
+</script>

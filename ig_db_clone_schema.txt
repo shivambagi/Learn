@@ -1,0 +1,106 @@
+create database ig_db_clone;
+=================================USERS===================================================
+create table users(
+id int primary key identity(1,1),
+username varchar(255) unique NOT NULL,
+created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+To view schema
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='users'
+
+insert into users (username) values('shivam'),('pranav');
+
+select * from users;
+
+=================================PHOTOS===================================================
+create table photos(
+id int primary key identity(1,1),
+image_url varchar(255) NOT NULL,
+user_id int FOREIGN KEY references users(id) NOT NULL,
+created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+select * from photos;
+
+insert into photos (image_url,user_id) values('/dummy1',1),('/dummy1',1),('/dummy2',2);
+
+
+select image_url, username, photos.created_at from photos 
+JOIN users
+ON photos.user_id = users.id;
+
+=================================COMMENTS===================================================
+create table comments(
+id int primary key identity(1,1),
+comment_text varchar(255) NOT NULL,
+user_id int FOREIGN KEY references users(id) NOT NULL,
+photo_id int FOREIGN KEY references photos(id) NOT NULL,
+created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+select * from comments;
+
+insert into comments (comment_text,user_id,photo_id) values('shivam->pranav',1,3),('pranav->shivam1',2,2);
+
+
+select comment_text, username, photos.image_url from comments 
+JOIN users
+ON comments.user_id = users.id 
+JOIN photos 
+ON comments.photo_id = photos.id;
+
+=================================LIKES===================================================
+create table likes(
+user_id int FOREIGN KEY references users(id) NOT NULL,
+photo_id int FOREIGN KEY references photos(id) NOT NULL,
+created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+primary key(user_id,photo_id)
+);
+
+select * from likes;
+
+insert into likes (user_id,photo_id) values(1,1),(1,3),(2,1);
+
+
+select username, photos.image_url from likes 
+JOIN users
+ON likes.user_id = users.id 
+JOIN photos 
+ON likes.photo_id = photos.id;
+
+=================================FOLLOWS===================================================
+create table follows(
+follower_id int FOREIGN KEY references users(id) NOT NULL,
+followee_id int FOREIGN KEY references users(id) NOT NULL,
+created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+primary key(follower_id,followee_id)
+);
+
+select * from follows;
+
+insert into follows (follower_id,followee_id) values(3,1),(1,3),(2,1);
+=================================HASHTAGS===================================================
+create table tags(
+id int PRIMARY KEY IDENTITY(1,1),
+tag_name varchar(255) UNIQUE,
+created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+
+create table photo_tags(
+photo_id int FOREIGN KEY references photos(id),
+tag_id int FOREIGN KEY references tags(id),
+PRIMARY KEY(photo_id,tag_id)
+);
+
+select * from photos;
+select * from tags;
+select * from photo_tags;
+
+insert into tags (tag_name) values('tags'),('cute'),('super'),('adorable'),('cat'),('IT');
+
+insert into photo_tags (photo_id,tag_id) values(1,1),(1,2),(1,3),(1,4),(3,6),(3,5),(1,6),(4,5),(4,4),(4,2),(4,3);
+
+
+============================================DATA================================================
