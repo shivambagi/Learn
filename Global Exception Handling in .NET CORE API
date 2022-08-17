@@ -1,0 +1,80 @@
+The below is in continuation to the topic in notes. This include logging as well as exception handling wrt yo specific statuscodes.
+
+    public class ExceptionMiddleware
+    {
+        private readonly RequestDelegate next;
+        private readonly ILogger<ExceptionMiddleware> logger;
+        private readonly IHostEnvironment env;
+
+        public ExceptionMiddleware(RequestDelegate next,ILogger<ExceptionMiddleware> logger,IHostEnvironment env)
+        {
+            this.next = next;
+            this.logger = logger;
+            this.env = env;
+        }
+
+        public async Task Invoke(HttpContext context)
+        {
+            try
+            {
+                await next(context);
+            }
+            catch(Exception ex)
+            {
+                ApiError response;
+                HttpStatusCode statusCode = HttpStatusCode.InternalServerError;
+                string message;
+                var exceptionType = ex.GetType();
+
+                if(exceptionType == typeof(UnauthorizedAccessException))
+                {
+                    statusCode = HttpStatusCode.Forbidden;
+                    message = "You are not authorized";
+                }
+                else
+                {
+                    statusCode = HttpStatusCode.InternalServerError;
+                    message = "Some Unknown error occurred";
+                }
+
+                if(env.IsDevelopment())
+                {
+                    response = new ApiError((int)statusCode, ex.Message, ex.StackTrace.ToString());
+                }
+                else
+                {
+                    response = new ApiError((int)statusCode, message);
+                }
+                logger.LogError(ex, ex.Message);
+                context.Response.StatusCode = (int)statusCode;
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync(response.ToString());
+            }
+        }
+    }
+    
+    
+    
+    public class ApiError
+    {
+        public ApiError(int errorCode,string errorMessage,string errorDetails = null)
+        {
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            ErrorDetails = ErrorDetails;
+
+        }
+
+        public int ErrorCode { get; set; }
+        public string ErrorMessage { get; set; }
+        public string ErrorDetails { get; set; }
+
+        public override string ToString()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+    }
+    
+    
+    And finally register in Configure() in startup.cs-
+    app.UseMiddleware<ExceptionMiddleware>();
