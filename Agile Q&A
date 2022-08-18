@@ -27,3 +27,53 @@ Scrum
     2) Product Backlog Refinement: Product Backlog Refinement is defined as an ongoing activity throughout the life of the Product Backlog.
     3) Sprint Backlog: It can be described as a subset of product backlog that consists of tasks that are focused on by the team in order to satisfy the sprint goal. Here, the teams have to identify the tasks that are to be completed from the product backlog. These will be then added to the sprint backlog.
     4) Product Increment: It is defined as a combination of all the product backlog items that are completed in a sprint and the value of the previous sprints’ increments. The output has to be in usable condition, even though the product owner doesn’t release it.
+
+15. List The Discussions That Happen In Daily Stand-Up Sessions?
+--> 1) What tasks went well.
+    2) What tasks were completed?
+    3) What tasks are pending?
+    4) The obstacles the team is facing
+
+18. How Long Are The Sprints?
+--> A sprint can be defined as a short, time-boxed period that a scrum team works to complete a set amount of work.
+    Sprints will usually be one month or less, where it creates a usable and potentially releasable product increment. The sprint can be as short as a week. Two weeks is the average.
+
+21. How Do You Say That Agile Is Working In Your Organization?
+--> When the products that you deliver to the end-user will result in higher customer retention rates and more customer acquisition
+    When there are no piles of technical debt, bugs are not present, and there is less time spent on maintenance, then we can say that Agile is going well in the company.
+
+22. How Can Someone Change A Requirement In Agile?
+--> 1. Involve the Customer Throughout the Development Process
+    2. Design a Product Backlog that can Accommodate Changes
+    3. Involve Your Client During the Daily Standup Meeting
+
+23. Do we accept changes within a sprint, or not? 
+--> It needs a balance between stability and flexibility and a fixed duration Sprint balances both.
+    Agility – Respond to change to maximize the business value delivered
+    Flow – Stick to a plan developed with team consensus to reduce ambiguity and maximize productivity
+
+43. Define The Terms User Stories, Epics, And Tasks?
+--> 1) User Stories: They will provide the team with simple explanations of the business’s requirements created from the end user’s view.  
+    2) Epics: An epic is usually defined as a collection of related user stories. They are usually huge and complex.
+    3) Tasks: We use tasks to break down user stories further. They’re the finest unit in Scrum that will be used to track work. Usually, a person or a team of two people work on a task.
+
+26. Who Should Write User Stories?
+--> Anyone can write user stories. But the product owner is responsible for ensuring the product backlog of the agile user stories exists, but it does not define that the product owner is the one who writes the stories. Over the journey of a good Agile project, we should expect to have user story examples that are written by each team member.
+
+29. What Is The Structure Of A Good User Story?
+--> A good user story looks like this:
+        1) It should include a description.
+        2) It should have acceptance criteria defined.
+        3) It should be capable of delivering within a single Sprint.
+        4) It should have all UI deliverables available.
+        5) It should have all (probable) dependencies identified.
+        6) Performance criteria have to be defined.
+        7) Tracking criteria has to be defined.
+        8) It should be estimated by the Scrum Team.
+
+42. Define Sprint?
+--> A sprint can be defined as a short, time-boxed period when the scrum team works to complete a given amount of work. Sprints are the heart of scrum and agile methodologies, and getting the sprints right will help the agile team ship better software with lesser headaches.
+
+30. What Will Happen In A Sprint Retrospective?
+--> Sprint retrospective usually takes place after sprint review. During this meeting, they discuss the previous mistakes, any potential issues, and new methods to handle them. This data is then incorporated into the planning of the next sprint.
+
