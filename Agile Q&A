@@ -1,0 +1,29 @@
+1. Can You Define The Roles In Scrum?
+--> 1) A product owner is an individual who will be responsible for increasing ROI by determining the product features, and prioritizing these features into a list, and specifies what needs to be focused on in the upcoming sprint.
+    2) Scrum Master helps the team to learn to apply Scrum in order to ensure optimum business value.
+    3) Scrum Team is a collection of individuals who mainly work together to ensure that the needs of the stakeholders are delivered on time.
+
+2. Define Agile In Simple Terms?
+--> Agile is used to describe the approaches to software development that emphasizes incremental delivery, continual planning, team collaboration, and continual learning.
+
+6. Can You Differentiate Between Agile And Scrum?
+Agile	
+  In the software development process, Agile is a  continuous iteration of development and testing.	
+  It delivers the software on a regular basis for feedback.
+Scrum
+  Scrum is defined as an Agile process that focuses on delivering the business value in the shortest period of time.
+  Here, it delivers the software after each sprint.
+  
+7. Is There A Scenario Where The Waterfall Is Preferable Over Scrum?
+-->For any project, there shouldn’t be an all-in-or-all-out approach because there are times where a hybrid methodology works best for the project. For example, if the work is predictable, simple, and is fully defined, then we would go for the waterfall. 
+
+8. Should The Scrum Team Involve In The Product Discovery Process?
+-->The Scrum Team should involve in the product discovery process because of the following reasons:
+      1) Involving a Scrum Team sooner will ensure that the team and the Product Owner are developing a shared understanding between them and they know what works best for the vision of the product.
+      2) The earlier the engineers participate in the product discovery process, the fewer the chances solutions will be pursued which are technically not viable.
+
+9. List The Artifacts Of The Scrum Process? 
+--> 1) Product Backlog: It is defined as a list that contains new features, changes to features, changes to the infrastructure, bug fixes, and other activities to ensure a specif output is obtained.
+    2) Product Backlog Refinement: Product Backlog Refinement is defined as an ongoing activity throughout the life of the Product Backlog.
+    3) Sprint Backlog: It can be described as a subset of product backlog that consists of tasks that are focused on by the team in order to satisfy the sprint goal. Here, the teams have to identify the tasks that are to be completed from the product backlog. These will be then added to the sprint backlog.
+    4) Product Increment: It is defined as a combination of all the product backlog items that are completed in a sprint and the value of the previous sprints’ increments. The output has to be in usable condition, even though the product owner doesn’t release it.
