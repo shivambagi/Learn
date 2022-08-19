@@ -1,0 +1,10 @@
+1) Enable IIS in Windows Features
+2)By default IIS is not configured to host .NET CORE appln. To check go to IIS main Dashboard, under IIS section --> Modules. If you see AspNetCoreModuleV2 the you need not do anything.
+  Go to Microsoft dotnet downloads and Hosting Bundle for the version you want. After this install and you will see it in Modules.
+3)Right Click on Sites --> Add Website --> Name it --> Select Default Pool --> Select the Directory where the build is published --> Give Port --> Ok
+4)You may get a 500 error once browse the link. For this go to IIS Dashboard under Management Section --> Configuration Editor --> System.WebServer --> aspNetCore --> 
+  Environmental Variable --> Right Side Panel --> Edit --> Add 
+    Name = ASPNETCORE_ENVIRONMENT
+    Value = Development               //If this is set to Development you can see the error in browser
+  --> Close Window and Apply
+5)See the error if any other environment variables need to be added add in the same way as above.
