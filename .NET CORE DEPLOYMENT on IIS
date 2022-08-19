@@ -8,3 +8,12 @@
     Value = Development               //If this is set to Development you can see the error in browser
   --> Close Window and Apply
 5)See the error if any other environment variables need to be added add in the same way as above.
+
+
+To Enable logging ==> If you set the ASPNETCORE_ENVIRONMENT to Production. You will to see production issues and also not expose the error.
+1) IIS Dashboard under Management Section --> Configuration Editor --> stdoutLogEnabled --> Cahneg value to True
+                                                                   --> stdoutLogFile --> Specify path where you want logs
+
+Application Pools alsow to have isolation between different application hosted on server. A single exception in one appln can failure in others as well.
+In classic .NET everything is hosted in the worker process w3wp.exe.
+While creating Appln Pools for .NET CORE appln use No managed code for runtime.
