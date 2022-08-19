@@ -17,3 +17,12 @@ To Enable logging ==> If you set the ASPNETCORE_ENVIRONMENT to Production. You w
 Application Pools alsow to have isolation between different application hosted on server. A single exception in one appln can failure in others as well.
 In classic .NET everything is hosted in the worker process w3wp.exe.
 While creating Appln Pools for .NET CORE appln use No managed code for runtime.
+
+Deploy on Server directly ==>
+Publish --> Web Server (IIS) --> Web Deploy --> Put in details
+                                            --> Server = IP
+                                            --> Sitename = Name of site in IIS
+                                            --> Destination URl = URl of website(Browse site)
+                                            --> Username and Password of server
+A Publish profile is created --> Click Publish
+If a 404 error arises then put in the route. Or if any other issue follow upper process.
