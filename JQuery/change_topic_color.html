@@ -1,0 +1,33 @@
+
+
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+        
+    </head>
+    <body>
+        
+        <div>
+            <p data-topic-name="discussion">General discussion</p>
+            <p data-topic-name="bugs">Bugs</p>
+            <p data-topic-name="animals">Animals</p>
+        </div>
+
+        <!-- Read values from custom data attributes -->
+        <script>
+            //$('[data-topic-name="discussion"]').css('background-color','red');
+
+            $("p").click(function(){
+                var name = $(this).attr("data-topic-name"); //returns value of cutom data attribute can also be used for others attributes
+                console.log($(this).attr("data-topic-name"));
+                $(`[data-topic-name='${name}']`).css('background-color','red');
+            })
+        </script>
+    </body>
+    </html>
+        
+    
