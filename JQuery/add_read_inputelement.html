@@ -1,0 +1,38 @@
+
+
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    
+</head>
+<body>
+    
+    <button id="btnadd">Add</button>
+    <div id="inputdiv">
+
+    </div>
+    <button id="btnread">Read</button>
+    <div id="readdiv">
+
+    </div>
+    <script>
+        $("#btnadd").click(function(){
+            $("#inputdiv").append('<input type="text" class="inputele"> <br>');
+        })
+        
+        $("#btnread").click(function(){
+            var arr =[];
+            $(".inputele").each(function(index,element){
+                var $paragraph = $(element);
+                arr.push($paragraph.val());
+            })
+            $("#readdiv").text(arr);
+        })
+    </script>
+</body>
+</html>
+    
