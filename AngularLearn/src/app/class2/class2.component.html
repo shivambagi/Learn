@@ -11,7 +11,7 @@
 
 -------------------------------------------
 <ol>
-    <li *ngFor="let user of arr;let i = index" [ngStyle]="{'color':i === count ? 'orange': '' }">
+    <li *ngFor="let user of arr;let i = index" [ngStyle]="{'color':i === arr.length/2 ? 'orange': '' }">
         {{user}}
     </li>
 </ol>
