@@ -1,0 +1,25 @@
+<p>class2 works!</p>
+
+
+<select [(ngModel)]="selectvalue" #getuser>
+    <option *ngFor="let user of arr;let i = index">{{user}}</option>
+</select>
+
+<button click (click)="selectfunc(getuser.value)">Click</button>
+
+{{selectvalue}}
+
+-------------------------------------------
+<ol>
+    <li *ngFor="let user of arr;let i = index" [ngStyle]="{'color':i === count ? 'orange': '' }">
+        {{user}}
+    </li>
+</ol>
+<br>
+<form #userform="ngForm" (ngSubmit) = "submitform(userform.value)">
+    <input #text1 name="ntext1" type="text" ngModel>
+    <br>
+    <input #text2 name="ntext2" type="text" ngModel>
+    <br>
+    <button type="submit">lick</button>
+</form>

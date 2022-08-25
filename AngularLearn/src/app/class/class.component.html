@@ -1,0 +1,20 @@
+<p>class works!</p>
+
+<button (click)="listadd()">Click</button>
+
+<ul *ngFor="let user of arr;let i = index">
+    
+    <!-- <li *ngIf="i >= count">{{user}}</li>  -->
+    <li [ngClass]="{error: i == count}">{{user}}</li>
+
+    <li [ngStyle]="{'color':i === count ? 'orange': '' }">{{user}}</li>
+</ul>
+
+{{msg}}
+
+<input type="text" value="{{val}}">
+
+
+<input type="text" [(ngModel)]="twoway">
+
+{{twoway}}

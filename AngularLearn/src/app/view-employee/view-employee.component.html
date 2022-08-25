@@ -1,0 +1,9 @@
+<p>view-employee works!</p>
+
+<button (click)="getdata()">Get</button>
+
+<ol>
+    <li *ngFor="let emp of emparray2">
+        {{emp.ID}} - {{emp.Name}} - {{emp.Mobile}}
+    </li>
+</ol>
