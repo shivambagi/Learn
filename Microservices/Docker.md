@@ -86,4 +86,3 @@ In other words, we can say that the image is a template, and the container is a 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Working with Images and Container**
 **Installing Docker for Windows / Mac Desktop**
-  - 
