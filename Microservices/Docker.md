@@ -79,4 +79,7 @@ In other words, we can say that the image is a template, and the container is a 
       - _Directory Mounts_ - It is one of the best options for docker storage. It mounts a host's directory into a container.
       - _Storage Plugins_ - It provides an ability to connect to external storage platforms.
       
-**Docker Taxonomy.**
+**Docker Taxonomy**
+
+![image](https://user-images.githubusercontent.com/84464752/196916179-2bd496ce-5ff4-422a-bfc8-bebce7114c43.png)
+
