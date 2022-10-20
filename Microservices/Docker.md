@@ -21,40 +21,13 @@ We have noticed that technologies today have evolved a lot to suit the requireme
     - With containers, applications could be broken down into their smallest component parts or “services” that serve a single purpose, and those services could be developed and deployed independently of each other instead of in one monolithic unit.
 ![image](https://user-images.githubusercontent.com/84464752/196883694-23160e2d-9ad3-4063-a6d7-22cb0c6bece5.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Benefits of Containerization**
+  - Reduced IT management resources.
+  - Faster spin ups.
+  - Smaller size means one physical machine can host many containers.
+  - Reduced & simplified security updates.
+  - Less code to transfer, migrate, and upload workloads.
+
 **What is Docker?**
 **Docker Benefits.**
 **Docker Architecture**
