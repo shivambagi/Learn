@@ -5,7 +5,7 @@ This open-source containerization platform is based on Linux that is useful for 
 We have noticed that technologies today have evolved a lot to suit the requirements of today's needs of customers and projects. So that monolithic architectures are replaced with microservices and docker/Kubernetes open-source platforms.
 
 ## **Introduction to Containerization and Docker**
-**Understanding VM's and Containers.**
+### **Understanding VM's and Containers.**
   - Virtual machines and Containers are two ways of deploying multiple, isolated services on a single platform. Both VMs and containers use virtualization.
   - What Is Virtualization?
     - Virtualization is the process of creating a simulated computing environment that’s abstracted from the physical computing hardware—essentially a computer-generated computer. Virtualization allows you to create multiple, virtual computing instances from the hardware and software components of a single machine.
@@ -21,18 +21,21 @@ We have noticed that technologies today have evolved a lot to suit the requireme
     - With containers, applications could be broken down into their smallest component parts or “services” that serve a single purpose, and those services could be developed and deployed independently of each other instead of in one monolithic unit.
 ![image](https://user-images.githubusercontent.com/84464752/196883694-23160e2d-9ad3-4063-a6d7-22cb0c6bece5.png)
 
-**Benefits of Containerization**
+
+### **Benefits of Containerization**
   - Reduced IT management resources.
   - Faster spin ups.
   - Smaller size means one physical machine can host many containers.
   - Reduced & simplified security updates.
   - Less code to transfer, migrate, and upload workloads.
 
-**What is Docker?**
+
+### **What is Docker?**
   - Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
   - Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allows you to run many containers simultaneously on a given host. Containers are lightweight and contain everything needed to run the application.
  
-**Docker Benefits.**
+
+### **Docker Benefits.**
   - Fast, consistent delivery of your applications.
     - Containers are great for continuous integration and continuous delivery (CI/CD) workflows.
     - When developers find bugs, they can fix them in the development environment and redeploy them to the test environment for testing and validation.
@@ -41,7 +44,8 @@ We have noticed that technologies today have evolved a lot to suit the requireme
     - Docker containers can run on a developer’s local laptop, on physical or virtual machines in a data center, on cloud providers, or in a mixture of environments.
   - Running more workloads on the same hardware -Since it is lightweight you can use more server capability for large no. of applications.
   
-**Docker Architecture**
+
+### **Docker Architecture**
   - Docker follows Client-Server architecture, which includes the three main components that are Docker Client, Docker Host, and Docker Registry.
 
 ![image](https://user-images.githubusercontent.com/84464752/196906491-f6b33e02-b839-4e63-b1ec-62a08660835f.png)
@@ -79,10 +83,12 @@ In other words, we can say that the image is a template, and the container is a 
       - _Directory Mounts_ - It is one of the best options for docker storage. It mounts a host's directory into a container.
       - _Storage Plugins_ - It provides an ability to connect to external storage platforms.
       
-**Docker Taxonomy**
+
+### **Docker Taxonomy**
 
 ![image](https://user-images.githubusercontent.com/84464752/196916179-2bd496ce-5ff4-422a-bfc8-bebce7114c43.png)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Working with Images and Container**
-**Installing Docker for Windows / Mac Desktop**
+
+### **Installing Docker for Windows / Mac Desktop**
