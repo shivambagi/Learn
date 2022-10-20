@@ -83,3 +83,7 @@ In other words, we can say that the image is a template, and the container is a 
 
 ![image](https://user-images.githubusercontent.com/84464752/196916179-2bd496ce-5ff4-422a-bfc8-bebce7114c43.png)
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## **Working with Images and Container**
+**Installing Docker for Windows / Mac Desktop**
+  - 
