@@ -90,5 +90,13 @@ In other words, we can say that the image is a template, and the container is a 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Working with Images and Container**
-
 ### **Installing Docker for Windows / Mac Desktop**
+      - https://docs.docker.com/get-docker/ - Download for Windows & Install
+      - WSL 2 is a new version of the Windows Subsystem for Linux architecture that powers the Windows Subsystem for Linux to run ELF64 Linux binaries on Windows.
+
+### **Installing Docker on Linux VM**
+### **Pulling Images**
+### **Starting and Stopping Containers**
+### **Running a Container in interactive mode**
+### **Creating Image from current state of Container**
+### **Important Docker Commands**
