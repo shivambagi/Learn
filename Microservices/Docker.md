@@ -102,6 +102,28 @@ In other words, we can say that the image is a template, and the container is a 
     - 7) Install any - "wsl --install -d Ubuntu-18.04" --> After installing create Username/password
     - 8) https://docs.docker.com/get-docker/ - Download for Windows & Install
     
+### **Some Docker Commands**
+  - **docker version** = gives all docker info
+  - **docker -v** = gives docker version
+  - **docker info** = Gives detailed info about docker installed on your system. Also gives details of running,paused,stopped containers and images.
+  - **docker --help** = gets list of commands available for docker. [e.g. docker images --help = gives respective commands for docker images]
+  - **docker login** = To login to Docker Hub(repository for docker images)
+  - Images
+    - **docker images** = list of all images [e.g. docker images --help,docker images -q(gives imageid of images)]
+    - **docker pull _imagename_** = to pull a image from docker hub
+    - **docker rmi** = to remove a image. done by providing a imageid [e.g. docker rmi 113afsfsf4]
+  - Containers
+    - **docker ps** = list of all conatiners [e.g. docker ps --help,docker ps -q(gives imageid of images)]
+    - **docker run _ubuntu_** = run a container(if its not available it will download an image first). It will not show the container name in list.
+    - **docker run -it _ubuntu_** = -it(i for interactive nad t for run a pseudo-TTY) It will run and load the container and also display in ps command.
+    - **docker start _ContainerId_** = to start a container
+    - **docker stop _ContainerId_** = to stop a container
+  - System
+    - **docker stats** = displays performance stats for running containers
+    - **docker system df** = displays disk space taken by images /containers, etc 
+    - **docker system prune** = removes all unused containers
+    - **docker system prune -a** = removes all unused images and containers
+
 ### **Installing Docker on Linux VM**
 ### **Pulling Images**
   - qwe
