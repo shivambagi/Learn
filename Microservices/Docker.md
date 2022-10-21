@@ -96,14 +96,16 @@ In other words, we can say that the image is a template, and the container is a 
     - 1) Check if "Virtual Machine Platform" & "Windows Subsystem for linux" is checked in Windows features on or off
     - 2) Check if WSL is installed by using in command prompt - "wsl" or "wsl -l -v"
     - 3) Download and install the "Linux kernel update package" - https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-    - 4) Set WSL 2 as your default version - "wsl --set-default-version 2"
-    - 5) Check for available installables by - "wsl -l -o"
-    - 6) Install any - "wsl --install -d Ubuntu-18.04"
-    - https://docs.docker.com/get-docker/ - Download for Windows & Install
-    
+    - 4) Enable Virtualization in BIOS
+    - 5) Set WSL 2 as your default version - "wsl --set-default-version 2"
+    - 6) Check for available installables by - "wsl -l -o"
+    - 7) Install any - "wsl --install -d Ubuntu-18.04" --> After installing create Username/password
+    - 8) https://docs.docker.com/get-docker/ - Download for Windows & Install
     
 ### **Installing Docker on Linux VM**
 ### **Pulling Images**
+  - qwe
+  - asdasd
 ### **Starting and Stopping Containers**
 ### **Running a Container in interactive mode**
 ### **Creating Image from current state of Container**
