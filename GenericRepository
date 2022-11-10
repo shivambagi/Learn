@@ -1,0 +1,49 @@
+public interface IGenericRepository<T> where T : class
+{
+     Task<IEnumerable<T>> GetAllAsync();
+     Task<T> GetByIdAsync(int id);
+}
+
+public class GenericRepository<T> : IGenericRepository<T> where T : class
+{
+     private CloneContext _context;
+
+     public GenericRepository(CloneContext context)
+     {
+         _context = context;
+     }
+
+     public async Task<IEnumerable<T>> GetAllAsync()
+     {
+         return await _context.Set<T>().ToListAsync();
+     }
+
+     public async Task<T> GetByIdAsync(int id)
+     {
+         return await _context.Set<T>().FindAsync(id);
+     }
+}
+
+public class NetworkRepository : GenericRepository<Network>, INetworkRepository
+{
+     private CloneContext _context;
+     public NetworkRepository(CloneContext context) : base(context)
+     {
+         _context = context;
+     }
+        
+     public async Task<IEnumerable<Supplier>> GetAcceptedSuppliersOfNetworkAsync(int? id)
+     {
+     }
+}
+
+public class NetworksController : ControllerBase
+{
+     private readonly INetworkRepository _network2;
+     private readonly IGenericRepository<Network> _network;
+     public NetworksController(IGenericRepository<Network> network, INetworkRepository network2)
+     {
+         _network = network;
+         _network2 = network2;
+     }
+}
