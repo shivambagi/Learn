@@ -49,3 +49,24 @@
   - This feature is generally used to create a feature separate(branch) from main code(master), develop and test and then merge it into main code(master)
   - To merge checkout in to the branch where you want to merge the feature branch
   - ***git merge branchname*** 
+
+- **Pushing to Github**
+  - Create a repo on github
+  - ***git remote -v*** == shows the connected repo of github with your workspace on PC
+  - ***git remote add origin https:/linkofrepo***
+  - ***git branch -M master*** == To point in which branch to push
+  - ***git push -u origin master*** == To push
+  - Similarly you can push different branches by changing names
+
+- **Work on Others Repos**
+- **Forking**
+  - It is used to work on others repo. It creates a remote copy of that repo in your account
+  - To fork go to github a hit fork button and create fork , it and copy that link.
+  - Commiting changes in fork will not affect main repo
+  - After commiting you have to make pull request,
+    - Hit Contribute Button in Forked repo --> Open Pull Request --> See made changes --> Create Pull Request
+    - This will send a request to the main repo owner, and he will approve the the Pull request and will merge with main repo
+
+- **Cloning**
+  - Clone will create the repos in you system
+  - ***git clone https://github.com/shivambagi/First-Contribution.git***
