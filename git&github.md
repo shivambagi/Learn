@@ -43,6 +43,9 @@
     - ***git checkout branchname***
   - Create and Checkout to branch at same time
     - ***git checkout -b ***
+  - In Azure Devops
+    - In VSC, After Cloning you can create a branch and publish the branch. 
+    - 
 
 - **Merge**
   - To merge 2 branches 
@@ -61,6 +64,11 @@
 
 - **Pull**
   - To update the local copy of the repo with the changes we made on GitHub, we use git pull.
+  - Or to pull changes from one branch to main branch.
+  - In Azure Devops
+    - On the file where you have made changes you have button for Pull request. --> Add the reviewers. --> Add the features you want to associate this with.
+      --> Reviewers need to approve and complete.
+    - You can do this from IDEs aswell.
 
 - **Work on Others Repos**
 - **Forking**
