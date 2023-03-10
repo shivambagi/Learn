@@ -51,12 +51,16 @@
   - ***git merge branchname*** 
 
 - **Pushing to Github**
+  - The git push command is used to transfer or push the commit, which is made on a local branch in your computer to a remote repository like GitHub.
   - Create a repo on github
   - ***git remote -v*** == shows the connected repo of github with your workspace on PC
   - ***git remote add origin https:/linkofrepo***
   - ***git branch -M master*** == To point in which branch to push
   - ***git push -u origin master*** == To push
-  - Similarly you can push different branches by changing names
+  - Similarly you can push different branches by changing name
+
+- **Pull**
+  - To update the local copy of the repo with the changes we made on GitHub, we use git pull.
 
 - **Work on Others Repos**
 - **Forking**
@@ -70,3 +74,5 @@
 - **Cloning**
   - Clone will create the repos in you system
   - ***git clone https://github.com/shivambagi/First-Contribution.git***
+  - In Azure devops,
+    - Go to Repos --> Select the Repo --> Click Clone button --> Select Dropdown for Clone in VS/VSC --> The IDE will be opened -->  Maybe asked for some prompts and login --> clone will be done
